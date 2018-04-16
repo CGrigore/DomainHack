@@ -20,6 +20,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res, next) => res.json([]));
+
 app.get('/:input', (req, res, next) => {
   const input = req.params.input;
   res.json(createDomain(input));
